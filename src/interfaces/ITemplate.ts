@@ -12,5 +12,5 @@ export interface ITemplate {
     description: string;
     thumbnail: string;
     elements: IElementSettings[];
-    templateSettings: ITemplateSettings;
+    settings: ITemplateSettings;
 }
