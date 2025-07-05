@@ -1,0 +1,78 @@
+[
+    {
+      "id": "tmp-01",
+      "name": "Simple Landing",
+      "description": "A clean and simple landing page template",
+      "thumbnail": "📄",
+      "elements": [
+        {
+          "id": "heading1",
+          "type": "heading",
+          "settings": {
+            "text": "Welcome to Our Site",
+            "fontSize": 32,
+            "color": "#333333",
+            "textAlign": "center"
+          }
+        },
+        {
+          "id": "paragraph1",
+          "type": "paragraph",
+          "settings": {
+            "text": "This is a beautiful landing page template that you can customize to your needs.",
+            "fontSize": 16,
+            "color": "#666666",
+            "textAlign": "center"
+          }
+        },
+        {
+          "id": "image1",
+          "type": "image",
+          "settings": {
+            "src": "https://via.placeholder.com/400x200",
+            "alt": "Hero Image",
+            "width": 400,
+            "height": 200
+          }
+        }
+      ]
+    },
+    {
+      "id": "tmp-02",
+      "name": "Business Card",
+      "description": "Professional business card style template",
+      "thumbnail": "💼",
+      "elements": [
+        {
+          "id": "heading1",
+          "type": "heading",
+          "settings": {
+            "text": "Khanh Nguyen",
+            "fontSize": 28,
+            "color": "#2c3e50",
+            "textAlign": "left"
+          }
+        },
+        {
+          "id": "paragraph1",
+          "type": "paragraph",
+          "settings": {
+            "text": "Senior Software Engineer",
+            "fontSize": 18,
+            "color": "#7f8c8d",
+            "textAlign": "left"
+          }
+        },
+        {
+          "id": "paragraph2",
+          "type": "paragraph",
+          "settings": {
+            "text": "Email: khanhquangdtu@gmail.com\nPhone: +84935055695",
+            "fontSize": 14,
+            "color": "#34495e",
+            "textAlign": "left"
+          }
+        }
+      ]
+    }
+]
