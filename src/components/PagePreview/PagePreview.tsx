@@ -1,5 +1,5 @@
 import React from 'react';
-import { useBuilderStore } from '../../store/builderStore';
+import { useBuilderStore } from '../../stores/builderStore';
 import styles from './PagePreview.module.css';
 
 const PagePreview: React.FC = () => {
