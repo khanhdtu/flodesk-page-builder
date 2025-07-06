@@ -3,6 +3,7 @@ import { useBuilderStore } from '../../stores/builderStore';
 import ExportButton from '../ExportButton/ExportButton';
 import TemplateList from '../TemplateList/TemplateList';
 import PagePreview from '../PagePreview/PagePreview';
+import PageSettings from '../PageSettings/PageSettings';
 import styles from './BuilderLayout.module.css';
 
 const BuilderLayout: React.FC = () => {
@@ -27,7 +28,7 @@ const BuilderLayout: React.FC = () => {
             </div>
             <aside className={styles.settingsPanel}>
               {selectedElementId ? <h1>Element Settings area</h1> : (
-                <h1>Page Settings area</h1>
+                <PageSettings />
               )}
             </aside>
           </div>

@@ -1,0 +1,78 @@
+.container {
+    padding: 1.5rem;
+}
+  
+.title {
+    margin: 0 0 1.5rem 0;
+    color: #333333;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+  
+.section {
+    margin-bottom: 1.5rem;
+}
+  
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555555;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+  
+.colorInput {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+.colorPicker {
+    width: 50px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+.colorText {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+  
+.rangeInput {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+  
+.rangeValue {
+    text-align: center;
+    color: #666666;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+  
+.info {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+  
+.info p {
+    margin: 0;
+    color: #666666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+  
+input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
