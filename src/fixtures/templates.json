@@ -4,11 +4,6 @@
       "name": "Simple Landing",
       "description": "A clean and simple landing page template",
       "thumbnail": "📄",
-      "settings": {
-        "backgroundColor": "#f0f0f0",
-        "fontFamily": "Arial, sans-serif",
-        "fontSize": 16
-      },
       "elements": [
         {
           "id": "heading1",
@@ -47,11 +42,6 @@
       "name": "Business Card",
       "description": "Professional business card style template",
       "thumbnail": "💼",
-      "settings": {
-        "backgroundColor": "#f0f0f0",
-        "fontFamily": "Arial, sans-serif",
-        "fontSize": 16
-      },
       "elements": [
         {
           "id": "heading1",
