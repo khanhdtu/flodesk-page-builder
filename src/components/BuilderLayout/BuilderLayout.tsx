@@ -2,10 +2,11 @@ import React from 'react';
 import { useBuilderStore } from '../../stores/builderStore';
 import ExportButton from '../ExportButton/ExportButton';
 import TemplateList from '../TemplateList/TemplateList';
+import PagePreview from '../PagePreview/PagePreview';
 import styles from './BuilderLayout.module.css';
 
 const BuilderLayout: React.FC = () => {
-  const { selectedTemplate } = useBuilderStore();
+  const { selectedTemplate, selectedElementId } = useBuilderStore();
 
   return (
     <div className={styles.container}>
@@ -21,7 +22,14 @@ const BuilderLayout: React.FC = () => {
           </div>
         ) : (
           <div className={styles.builderContent}>
-            <h1>Page Review & Settings areas</h1>
+            <div className={styles.pageContent}>
+              <PagePreview />
+            </div>
+            <aside className={styles.settingsPanel}>
+              {selectedElementId ? <h1>Element Settings area</h1> : (
+                <h1>Page Settings area</h1>
+              )}
+            </aside>
           </div>
         )}
       </main>
