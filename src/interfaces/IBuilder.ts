@@ -12,4 +12,6 @@ export interface IBuilderState {
     setElements: (elements: IElementSettings[]) => void;
     selectElement: (id: string | null) => void;
     setPageSettings: (settings: Partial<IPageSettings>) => void;
+    updateElementSettings: (id: string, settings: Partial<IElementSettings>) => void;
+    resetBuilder: () => void;
 }

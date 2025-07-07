@@ -33,4 +33,18 @@ export const useBuilderStore = create<IBuilderState>((set) => ({
     set((state) => ({
       pageSettings: { ...state.pageSettings, ...settings },
     })),
+
+  updateElementSettings: (id: string, settings: any) =>
+    set((state) => ({
+      elements: state.elements.map((el) =>
+        el.id === id ? { ...el, settings: { ...el.settings, ...settings } } : el
+      ),
+    })),
+      
+  resetBuilder: () => set({
+    selectedTemplate: null,
+    pageSettings: defaultPageSettings,
+    elements: [],
+    selectedElementId: null
+  })
 })); 
