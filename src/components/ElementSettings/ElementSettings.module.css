@@ -1,0 +1,114 @@
+.container {
+    padding: 1.5rem;
+}
+  
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+  
+.title {
+    margin: 0;
+    color: #333333;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+  
+.closeButton {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #666666;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+  
+.closeButton:hover {
+    background-color: #f0f0f0;
+}
+  
+.section {
+    margin-bottom: 1.5rem;
+}
+  
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555555;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+  
+.textInput {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    resize: vertical;
+}
+  
+.textInput:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+  
+.rangeInput {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+  
+.rangeValue {
+    text-align: center;
+    color: #666666;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+  
+.colorInput {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+  
+.colorPicker {
+    width: 50px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+.colorText {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+  
+.select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    background-color: white;
+}
+  
+.select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}

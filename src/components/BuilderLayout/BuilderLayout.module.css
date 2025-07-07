@@ -20,6 +20,7 @@
     color: #333333;
     font-size: 1.5rem;
     font-weight: 600;
+    cursor: pointer;
 }
   
 .main {
@@ -50,3 +51,32 @@
     justify-content: center;
     align-items: flex-start;
 }
+  
+.settingsPanel {
+    width: 350px;
+    background-color: #ffffff;
+    border-left: 1px solid #e0e0e0;
+    overflow-y: auto;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+}
+  
+@media (max-width: 768px) {
+    .builderContent {
+      flex-direction: column;
+    }
+    
+    .settingsPanel {
+      width: 100%;
+      border-left: none;
+      border-top: 1px solid #e0e0e0;
+      max-height: 300px;
+    }
+    
+    .header {
+      padding: 1rem;
+    }
+    
+    .title {
+      font-size: 1.25rem;
+    }
+} 

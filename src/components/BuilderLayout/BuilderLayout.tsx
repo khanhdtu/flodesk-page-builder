@@ -4,15 +4,16 @@ import ExportButton from '../ExportButton/ExportButton';
 import TemplateList from '../TemplateList/TemplateList';
 import PagePreview from '../PagePreview/PagePreview';
 import PageSettings from '../PageSettings/PageSettings';
+import ElementSettings from '../ElementSettings/ElementSettings';
 import styles from './BuilderLayout.module.css';
 
 const BuilderLayout: React.FC = () => {
-  const { selectedTemplate, selectedElementId } = useBuilderStore();
+  const { selectedTemplate, selectedElementId, resetBuilder } = useBuilderStore();
 
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <h1 className={styles.title}>Flodesk Page Builder</h1>
+        <h1 className={styles.title} onClick={resetBuilder}>Flodesk Page Builder</h1>
         <ExportButton />
       </header>
       
@@ -27,7 +28,7 @@ const BuilderLayout: React.FC = () => {
               <PagePreview />
             </div>
             <aside className={styles.settingsPanel}>
-              {selectedElementId ? <h1>Element Settings area</h1> : (
+              {selectedElementId ? <ElementSettings /> : (
                 <PageSettings />
               )}
             </aside>
