@@ -1,11 +1,20 @@
 import React from 'react';
-import { useBuilderStore } from '../../stores/builderStore';
+import { useElementSelection } from '../../hooks/useElementSelection';
+import { useElementSettings } from '../../hooks/useElementSettings';
 import styles from './ElementSettings.module.css';
 
 const ElementSettings: React.FC = () => {
-  const { elements, selectedElementId, updateElementSettings, selectElement } = useBuilderStore();
-
-  const selectedElement = elements.find(el => el.id === selectedElementId);
+  const { selectedElement, clearSelection } = useElementSelection();
+  const {
+    handleTextChange,
+    handleFontSizeChange,
+    handleColorChange,
+    handleTextAlignChange,
+    handleImageSrcChange,
+    handleImageAltChange,
+    handleImageWidthChange,
+    handleImageHeightChange
+  } = useElementSettings();
 
   if (!selectedElement) {
     return (
@@ -16,17 +25,13 @@ const ElementSettings: React.FC = () => {
     );
   }
 
-  const handleSettingChange = (key: string, value: any) => {
-    updateElementSettings(selectedElementId!, { [key]: value });
-  };
-
   const renderTextSettings = () => (
     <>
       <div className={styles.section}>
         <label className={styles.label}>Text</label>
         <textarea
           value={selectedElement.settings.text || ''}
-          onChange={(e) => handleSettingChange('text', e.target.value)}
+          onChange={(e) => handleTextChange(e.target.value)}
           className={styles.textInput}
           rows={3}
         />
@@ -39,7 +44,7 @@ const ElementSettings: React.FC = () => {
           min="12"
           max="72"
           value={selectedElement.settings.fontSize || 16}
-          onChange={(e) => handleSettingChange('fontSize', parseInt(e.target.value))}
+          onChange={(e) => handleFontSizeChange(parseInt(e.target.value))}
           className={styles.rangeInput}
         />
         <div className={styles.rangeValue}>{selectedElement.settings.fontSize || 16}px</div>
@@ -51,13 +56,13 @@ const ElementSettings: React.FC = () => {
           <input
             type="color"
             value={selectedElement.settings.color || '#000000'}
-            onChange={(e) => handleSettingChange('color', e.target.value)}
+            onChange={(e) => handleColorChange(e.target.value)}
             className={styles.colorPicker}
           />
           <input
             type="text"
             value={selectedElement.settings.color || '#000000'}
-            onChange={(e) => handleSettingChange('color', e.target.value)}
+            onChange={(e) => handleColorChange(e.target.value)}
             className={styles.colorText}
           />
         </div>
@@ -67,7 +72,7 @@ const ElementSettings: React.FC = () => {
         <label className={styles.label}>Text Align</label>
         <select
           value={selectedElement.settings.textAlign || 'left'}
-          onChange={(e) => handleSettingChange('textAlign', e.target.value)}
+          onChange={(e) => handleTextAlignChange(e.target.value)}
           className={styles.select}
         >
           <option value="left">Left</option>
@@ -85,7 +90,7 @@ const ElementSettings: React.FC = () => {
         <input
           type="text"
           value={selectedElement.settings.src || ''}
-          onChange={(e) => handleSettingChange('src', e.target.value)}
+          onChange={(e) => handleImageSrcChange(e.target.value)}
           className={styles.textInput}
           placeholder="https://example.com/image.jpg"
         />
@@ -96,7 +101,7 @@ const ElementSettings: React.FC = () => {
         <input
           type="text"
           value={selectedElement.settings.alt || ''}
-          onChange={(e) => handleSettingChange('alt', e.target.value)}
+          onChange={(e) => handleImageAltChange(e.target.value)}
           className={styles.textInput}
           placeholder="Image description"
         />
@@ -109,7 +114,7 @@ const ElementSettings: React.FC = () => {
           min="100"
           max="800"
           value={selectedElement.settings.width || 400}
-          onChange={(e) => handleSettingChange('width', parseInt(e.target.value))}
+          onChange={(e) => handleImageWidthChange(parseInt(e.target.value))}
           className={styles.rangeInput}
         />
         <div className={styles.rangeValue}>{selectedElement.settings.width || 400}px</div>
@@ -122,7 +127,7 @@ const ElementSettings: React.FC = () => {
           min="50"
           max="600"
           value={selectedElement.settings.height || 200}
-          onChange={(e) => handleSettingChange('height', parseInt(e.target.value))}
+          onChange={(e) => handleImageHeightChange(parseInt(e.target.value))}
           className={styles.rangeInput}
         />
         <div className={styles.rangeValue}>{selectedElement.settings.height || 200}px</div>
@@ -137,7 +142,7 @@ const ElementSettings: React.FC = () => {
           {selectedElement.type.charAt(0).toUpperCase() + selectedElement.type.slice(1)} Settings
         </h3>
         <button
-          onClick={() => selectElement(null)}
+          onClick={clearSelection}
           className={styles.closeButton}
         >
           ×

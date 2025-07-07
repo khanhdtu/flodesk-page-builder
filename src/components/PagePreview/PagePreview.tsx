@@ -1,17 +1,15 @@
 import React from 'react';
 import { useBuilderStore } from '../../stores/builderStore';
+import { useElementSelection } from '../../hooks/useElementSelection';
 import styles from './PagePreview.module.css';
 
 const PagePreview: React.FC = () => {
-  const { pageSettings, elements, selectElement, selectedElementId } = useBuilderStore();
-
-  const handleElementClick = (elementId: string) => {
-    selectElement(elementId);
-  };
+  const { pageSettings, elements } = useBuilderStore();
+  const { handleElementClick, isElementSelected } = useElementSelection();
 
   const renderElement = (element: any) => {
     const { id, type, settings } = element;
-    const isSelected = selectedElementId === id;
+    const isSelected = isElementSelected(id);
 
     const elementStyle = {
       cursor: 'pointer',

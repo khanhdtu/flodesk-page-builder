@@ -1,17 +1,13 @@
 import React from 'react';
-import { useBuilderStore } from '../../stores/builderStore';
+import { usePageSettings } from '../../hooks/usePageSettings';
 import styles from './PageSettings.module.css';
 
 const PageSettings: React.FC = () => {
-  const { pageSettings, setPageSettings } = useBuilderStore();
-
-  const handleBackgroundColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPageSettings({ backgroundColor: e.target.value });
-  };
-
-  const handleWidthChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPageSettings({ width: parseInt(e.target.value) });
-  };
+  const {
+    pageSettings,
+    handleBackgroundColorChange,
+    handleWidthChange
+  } = usePageSettings();
 
   return (
     <div className={styles.container}>
