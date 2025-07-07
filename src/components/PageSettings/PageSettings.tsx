@@ -1,5 +1,5 @@
 import React from 'react';
-import { usePageSettings } from '../../hooks/usePageSettings';
+import { usePageSettings } from '@hooks/usePageSettings';
 import styles from './PageSettings.module.css';
 
 const PageSettings: React.FC = () => {

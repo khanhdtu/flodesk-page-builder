@@ -1,5 +1,5 @@
 import React from 'react';
-import { useBuilderStore } from '../../stores/builderStore';
+import { useBuilderStore } from '@stores/builderStore';
 import styles from './ExportButton.module.css';
 
 const ExportButton: React.FC = () => {

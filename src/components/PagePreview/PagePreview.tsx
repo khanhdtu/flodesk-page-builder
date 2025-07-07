@@ -1,6 +1,6 @@
 import React from 'react';
-import { useBuilderStore } from '../../stores/builderStore';
-import { useElementSelection } from '../../hooks/useElementSelection';
+import { useBuilderStore } from '@stores/builderStore';
+import { useElementSelection } from '@hooks/useElementSelection';
 import styles from './PagePreview.module.css';
 
 const PagePreview: React.FC = () => {

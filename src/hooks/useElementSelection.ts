@@ -1,4 +1,4 @@
-import { useBuilderStore } from '../stores/builderStore';
+import { useBuilderStore } from '@stores/builderStore';
 
 export const useElementSelection = () => {
   const { selectedElementId, selectElement, elements } = useBuilderStore();

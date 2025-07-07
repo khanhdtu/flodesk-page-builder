@@ -1,10 +1,10 @@
 import React from 'react';
-import { useBuilderStore } from '../../stores/builderStore';
-import ExportButton from '../ExportButton/ExportButton';
-import TemplateList from '../TemplateList/TemplateList';
-import PagePreview from '../PagePreview/PagePreview';
-import PageSettings from '../PageSettings/PageSettings';
-import ElementSettings from '../ElementSettings/ElementSettings';
+import { useBuilderStore } from '@stores/builderStore';
+import ExportButton from '@components/ExportButton/ExportButton';
+import TemplateList from '@components/TemplateList/TemplateList';
+import PagePreview from '@components/PagePreview/PagePreview';
+import PageSettings from '@components/PageSettings/PageSettings';
+import ElementSettings from '@components/ElementSettings/ElementSettings';
 import styles from './BuilderLayout.module.css';
 
 const BuilderLayout: React.FC = () => {

@@ -1,5 +1,4 @@
-import React from 'react';
-import BuilderLayout from './components/BuilderLayout/BuilderLayout';
+import BuilderLayout from '@components/BuilderLayout/BuilderLayout';
 import './App.css';
 
 function App() {

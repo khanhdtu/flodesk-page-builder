@@ -1,6 +1,6 @@
 import React from 'react';
-import { useElementSelection } from '../../hooks/useElementSelection';
-import { useElementSettings } from '../../hooks/useElementSettings';
+import { useElementSelection } from '@hooks/useElementSelection';
+import { useElementSettings } from '@hooks/useElementSettings';
 import styles from './ElementSettings.module.css';
 
 const ElementSettings: React.FC = () => {

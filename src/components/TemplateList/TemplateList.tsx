@@ -1,5 +1,5 @@
 import React from 'react';
-import { useBuilderStore } from '../../stores/builderStore';
+import { useBuilderStore } from '@stores/builderStore';
 import styles from './TemplateList.module.css';
 
 const TemplateList: React.FC = () => {

@@ -1,7 +1,7 @@
 import { create } from 'zustand';
-import { ITemplate, IBuilderState, IPageSettings } from '../interfaces';
-import templates from '../fixtures/templates.json';
-import settings from '../fixtures/settings.json';
+import { ITemplate, IBuilderState, IPageSettings } from '@interfaces';
+import templates from '@fixtures/templates.json';
+import settings from '@fixtures/settings.json';
 
 const defaultTemplates = templates as ITemplate[];
 
