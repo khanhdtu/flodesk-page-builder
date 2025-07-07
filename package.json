@@ -1,6 +1,8 @@
 {
   "name": "flodesk-page-builder",
   "version": "0.1.0",
+  "author": "Khanh Nguyen",
+  "description": "This is a test project for the senior frontend developer position at Flodesk",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
